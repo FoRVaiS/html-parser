@@ -1,0 +1,51 @@
+{
+  "name": "@forvais/html-parser",
+  "description": "A parser library to convert an HTML string into an AST",
+  "version": "0.0.0",
+  "author": "Ben Chiang <chiangbenjamin991@gmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "maxHeaderWidth": 72,
+      "maxLineWidth": 72
+    },
+    "src": "src/",
+    "dist": "dist/"
+  },
+  "devDependencies": {
+    "@forvais/eslint-config-base": "^1.0.0",
+    "@forvais/eslint-config-node": "^1.0.0",
+    "@tsconfig/node16": "^1.0.2",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.25",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "commitizen": "^4.2.4",
+    "conventional-changelog-cli": "^2.2.2",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.13.0",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^27.5.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.4",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.6.6",
+    "tsconfig-paths": "^3.14.1",
+    "typescript": "^4.6.3"
+  },
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz",
+    "lint": "eslint --ext ts $npm_package_config_src/",
+    "lint:all": "eslint .",
+    "test": "jest",
+    "!build:tsc": "rimraf $npm_package_config_dist && tsc -p tsconfig.release.json && tsc-alias -p tsconfig.release.json",
+    "build": "npm run !build:tsc",
+    "start": "node ./$npm_package_config_dist",
+    "start:dev": "cross-env NODE_ENV=development ts-node-dev --respawn -r tsconfig-paths/register ./$npm_package_config_src",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  }
+}
