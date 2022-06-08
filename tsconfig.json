@@ -19,7 +19,8 @@
     "outDir": "dist/",
     "declaration": true,
     "paths": {
-      "!interfaces/*": ["./src/interfaces/*"]
+      "!interfaces/*": ["./src/interfaces/*"],
+      "!tokenizers/*": ["./src/tokenizers/*"]
     }
   },
   "include": ["src/**/*.ts"],
