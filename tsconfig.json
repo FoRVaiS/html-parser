@@ -20,7 +20,8 @@
     "declaration": true,
     "paths": {
       "!types/*": ["src/types/*"],
-      "!tokenizers/*": ["./src/tokenizers/*"]
+      "!tokenizers/*": ["./src/tokenizers/*"],
+      "!utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src/**/*.ts", "__tests__/**/*.test.ts"],
