@@ -19,7 +19,7 @@
     "outDir": "dist/",
     "declaration": true,
     "paths": {
-      "!interfaces/*": ["./src/interfaces/*"],
+      "!types/*": ["src/types/*"],
       "!tokenizers/*": ["./src/tokenizers/*"]
     }
   },
