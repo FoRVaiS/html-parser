@@ -39,7 +39,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12,
   },
-  ignorePatterns: ['*.d.ts', 'node_modules/', 'dist/'],
+  ignorePatterns: ['*.d.ts', 'node_modules/', 'dist/', '**/types/*.ts'],
   overrides: [
     {
       files: ['*.ts'],
