@@ -23,6 +23,6 @@
       "!tokenizers/*": ["./src/tokenizers/*"]
     }
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "__tests__/**/*.test.ts"],
   "exclude": ["node_modules/"]
 }
