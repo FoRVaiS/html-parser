@@ -4,6 +4,7 @@ export const enum TokenType {
   TEXT = 'text',
   OPEN_BRACKET = 'open_bracket',
   CLOSE_BRACKET = 'close_bracket',
+  CLOSE_SLASH = 'close_slash',
 }
 
 export type Token = {
