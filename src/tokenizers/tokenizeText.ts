@@ -11,9 +11,7 @@ export const tokenizeText: Tokenizer<TextToken> = state => {
 
   return [{
     type: TokenType.TEXT,
-    processedChars: text.length,
-    node: {
-      value: text.trim(),
-    },
+    processed: text.length,
+    value: text.trim(),
   }];
 };

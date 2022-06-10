@@ -6,10 +6,8 @@ export const enum TokenType {
 
 export type TextToken = {
   type: TokenType.TEXT
-  processedChars: number;
-  node: {
-    value: string
-  }
+  processed: number;
+  value: string;
 }
 
 export type Token = (TextToken);
