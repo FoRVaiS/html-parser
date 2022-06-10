@@ -1,16 +1,6 @@
 import { TokenType, type Tokenizer } from '!types/index';
+import { tokenizeCharacter } from './tokenizeCharacter';
 
 const OPEN_BRACKET_CHAR = '<';
 
-export const tokenizeOpenBracket: Tokenizer = state => {
-  const char = state.data[state.cursor];
-
-  // Is the selected character equal to the open bracket character?
-  if (char !== OPEN_BRACKET_CHAR) return null;
-
-  return [{
-    type: TokenType.OPEN_BRACKET,
-    processed: 1,
-    value: char,
-  }];
-};
+export const tokenizeOpenBracket: Tokenizer = tokenizeCharacter(TokenType.OPEN_BRACKET, OPEN_BRACKET_CHAR);
