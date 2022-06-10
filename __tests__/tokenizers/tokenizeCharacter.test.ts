@@ -1,7 +1,9 @@
 import { TokenType } from '!types/index';
-import { tokenizeOpenBracket as tokenize } from '!tokenizers/tokenizeOpenBracket';
+import { tokenizeCharacter as factory } from '!tokenizers/tokenizeCharacter';
 
-it('should tokenize an opening bracket', () => {
+const tokenize = factory(TokenType.OPEN_BRACKET, '<');
+
+it('should tokenize a character from the factory function', () => {
   const input = '<';
 
   const result = tokenize({
@@ -35,7 +37,7 @@ it('should tokenize on an offset cursor', () => {
   expect(result).toStrictEqual(expected);
 });
 
-it('should return null if the char is not an opening bracket', () => {
+it('should return null if the char does not match', () => {
   const input = 'Text Node <element></element>';
 
   const result = tokenize({
