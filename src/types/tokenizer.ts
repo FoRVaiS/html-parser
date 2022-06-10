@@ -1,14 +1,13 @@
 import type { Stateful } from './state';
 
 export const enum TokenType {
-  TEXT = 'text'
+  TEXT = 'text',
 }
 
-export type TextToken = {
-  type: TokenType.TEXT
+export type Token = {
+  type: TokenType
   processed: number;
   value: string;
 }
 
-export type Token = (TextToken);
-export type Tokenizer<T extends Token = Token> = Stateful<Array<T>>;
+export type Tokenizer = Stateful<Array<Token>>;

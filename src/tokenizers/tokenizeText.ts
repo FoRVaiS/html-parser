@@ -1,7 +1,7 @@
-import { type TextToken, type Tokenizer, TokenType } from '!types/index';
+import { type Tokenizer, TokenType } from '!types/index';
 
 /** Tokenize a string of characters up until the first occurrence of an element or the end of string. */
-export const tokenizeText: Tokenizer<TextToken> = state => {
+export const tokenizeText: Tokenizer = state => {
   // The index of the first occurrence of a closing bracket
   const endingBracketIndex = state.data.indexOf('>', state.cursor);
 
