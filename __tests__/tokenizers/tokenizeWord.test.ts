@@ -1,5 +1,5 @@
 import { TokenType } from '!types/index';
-import { tokenizeText as tokenize } from '!tokenizers/tokenizeText';
+import { tokenizeWord as tokenize } from '!tokenizers/tokenizeWord';
 
 it('should tokenize a single word', () => {
   const input = 'Text';

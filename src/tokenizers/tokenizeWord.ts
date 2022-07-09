@@ -1,7 +1,7 @@
 import { type Tokenizer, TokenType } from '!types/index';
 
 /** Tokenize a string of characters up until the first occurrence of an element or the end of string. */
-export const tokenizeText: (delimiters?: Array<string>) => Tokenizer = (delimiters = []) => state => {
+export const tokenizeWord: (delimiters?: Array<string>) => Tokenizer = (delimiters = []) => state => {
   // The index of the first occurrence of a closing bracket
   const endingBracketIndex = state.data.indexOf('>', state.cursor);
 
